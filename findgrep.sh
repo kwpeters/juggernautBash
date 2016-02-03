@@ -10,4 +10,11 @@
 
 # Note: The last grep is used to colorize the output.  It is not absolutely necessary.
 
-find . -iregex $1 -exec grep -Hin -C 5 $2 {} \; 2> /dev/null | grep --color=auto -i -C 5 $2
+
+if [ -z "$2" ]; then
+    # No text regex was specified.  We will just find file names that match.
+    find . -iregex $1 -print
+else
+    # Both a file name regex and a text regex were specified.
+    find . -iregex $1 -exec grep -Hin -C 5 $2 {} \; 2> /dev/null | grep --color=auto -i -C 5 $2
+fi

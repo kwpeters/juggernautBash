@@ -9,4 +9,5 @@
 # file.
 
 # Note: The last grep is used to colorize the output.  It is not absolutely necessary.
-find . -iregex $1 -exec grep -Hin $2 {} \; 2> /dev/null | grep --color=auto -i $2
+
+find . -iregex $1 -exec grep -Hin -C 5 $2 {} \; 2> /dev/null | grep --color=auto -i -C 5 $2

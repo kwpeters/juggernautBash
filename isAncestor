@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 #
 # git-is-ancestor, by Simon Whitaker
 #

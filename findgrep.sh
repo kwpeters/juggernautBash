@@ -22,8 +22,8 @@ fi
 
 if [ -z "$2" ]; then
     # No text regex was specified.  We will just find file names that match.
-    find . -iregex "$1" -print
+    find . ! -path "*/node_modules/*" ! -path "*/bower_components/*" ! -path "*/.git/*" -iregex "$1" -print
 else
     # Both a file name regex and a text regex were specified.
-    find . -iregex "$1" -exec grep -Hin -C $NUM_CONTEXT_LINES "$2" {} \; 2> /dev/null | grep --color=auto -i -C $NUM_CONTEXT_LINES "$2"
+    find . ! -path "*/node_modules/*" ! -path "*/bower_components/*" ! -path "*/.git/*" -iregex "$1" -exec grep -Hin -C $NUM_CONTEXT_LINES "$2" {} \; 2> /dev/null | grep --color=auto -i -C $NUM_CONTEXT_LINES "$2"
 fi

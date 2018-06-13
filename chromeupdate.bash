@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+# To completely remove your existing Chrome app on OS X and install a specific
+# version that will not automatically update:
+# 1.  Remove the app from the "Applications" folder.
+# 2.  rm -rf ~/Library/Application Support/Google/Chrome
+# 3.  rm -rf ~/Library/Google/GoogleSoftwareUpdate
+# 4.  Install your new version of Chrome.
+# 5.  Run Chrome for the first time in order to let it perform 1-time installation tasks.
+# 6.  Quit Chrome.
+# 7.  Run this script and disable automatic updates
+
 # Taken from this page:
 # https://discussions.apple.com/thread/7812708
 
@@ -15,8 +25,8 @@ deniedUser="nobody"
 # Normal permissions on this directory are "drwxr-xr-x" (achieved with "chmod 0755")
 updateFolder="~/Library/Google/GoogleSoftwareUpdate/"
 
-echo "1. Enable Chrome autoupdate"
-echo "2. Disable Chrome autoupdate"
+echo "1. Enable Chrome automatic updates"
+echo "2. Disable Chrome automatic updates"
 
 read commandNum
 

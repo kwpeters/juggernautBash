@@ -3,7 +3,7 @@
 # To completely remove your existing Chrome app on OS X and install a specific
 # version that will not automatically update:
 # 1.  Remove the app from the "Applications" folder.
-# 2.  rm -rf ~/Library/Application Support/Google/Chrome
+# 2.  rm -rf "~/Library/Application Support/Google/Chrome"
 # 3.  rm -rf ~/Library/Google/GoogleSoftwareUpdate
 # 4.  Install your new version of Chrome.
 # 5.  Run Chrome for the first time in order to let it perform 1-time installation tasks.

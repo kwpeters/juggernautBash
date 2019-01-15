@@ -8,11 +8,12 @@
 # The second argument (optional) is a regular expression for the text to be
 # searched for within each file.
 #
-# The third argument (optional) is the number of context lines to output above and below
-# each match.  If not specified, a default of 5 is used.
+# The third argument (optional) is the number of context lines to output above
+# and below each match.  If not specified, a default of 5 is used.
 
 
-# Note: The last grep is used to colorize the output.  It is not absolutely necessary.
+# Note: The last grep is used to colorize the output.  It is not absolutely
+# necessary.
 
 NUM_CONTEXT_LINES=5
 if ! [ -z "$3" ]; then

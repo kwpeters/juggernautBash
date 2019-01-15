@@ -2,14 +2,15 @@
 
 # This script searches for text patterns within a set of files.
 #
-# The first argument is a regular expression that determines the set of files to be
-# searched.
+# The first argument is a regular expression that determines the set of files to
+# be searched.
 #
-# The second argument (optional) is a regular expression for the text to be searched for
-# within each file.
+# The second argument (optional) is a regular expression for the text to be
+# searched for within each file.
 #
 # The third argument (optional) is the number of context lines to output above and below
 # each match.  If not specified, a default of 5 is used.
+
 
 # Note: The last grep is used to colorize the output.  It is not absolutely necessary.
 
